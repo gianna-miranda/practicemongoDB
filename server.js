@@ -24,13 +24,14 @@ app.use(express.static("public"));
 
 // Serve up static assets (heroku)
 // Connect to Atlas in production
-if (process.env.NODE_ENV === "production") {
-  uri = process.env.ATLAS_URI;
+if (process.env.NODE_ENV === "production") { 
+  uri = process.env.ATLAS_URI;  //production 
 } else {  
   // localhost
-  uri = process.env.LOCAL_URI  
+  // uri = process.env.LOCAL_URI   //development 
+  uri = process.env.ATLAS_URI; 
 }
-
+//this is a comment
 // database connection ppol
 let db = ""
 let dbName = "notetaker"
